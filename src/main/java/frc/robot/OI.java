@@ -7,11 +7,19 @@
 
 package frc.robot;
 
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import frc.robot.commands.*;
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+  public Joystick driverController = new Joystick(RobotMap.OI_DRIVER_CONTROLLER);
+    // create buttons linked to each button on the controller
+   
   //// CREATING BUTTONS
   // One type of button is a joystick button which is any button on a
   //// joystick.
@@ -19,6 +27,12 @@ public class OI {
   // number it is.
   // Joystick stick = new Joystick(port);
   // Button button = new JoystickButton(stick, buttonNumber);
+  Button D1 = new JoystickButton(driverController, 1);
+  Button D2 = new JoystickButton(driverController, 2);
+  Button D3 = new JoystickButton(driverController, 3);
+  Button D4 = new JoystickButton(driverController, 4);
+  Button D5 = new JoystickButton(driverController, 5);
+  Button D6 = new JoystickButton(driverController, 6); 
 
   // There are a few additional built in buttons you can use. Additionally,
   // by subclassing Button you can create custom triggers and bind those to
